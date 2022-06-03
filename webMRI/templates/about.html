@@ -1,0 +1,73 @@
+<!-- CHANGING BELOW COMMENT WILL BREAK UNIT TESTING -->
+<!-- Model Information -->
+<!-- CHANGING ABOVE COMMENT WILL BREAK UNIT TESTING -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="../static/brain.ico">
+    <meta charset="UTF-8">
+    <title>About</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/style/css/bootstrap.css">
+    <!-- Style CSS -->
+	<link rel="stylesheet" href="../static/style/css/style.css">
+
+<style>
+h2 {
+	font-weight: bold;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+
+h3 {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 18px;
+	color: #707070;
+	font-family: sans-serif;
+}
+
+p {
+	text-align: center;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+	<!-- Navigation Bar -->
+	<div class="topnav">
+		<a href="/">Home</a>
+		<a href="/data">Data Description</a>
+		<a class="active" href="/about">ML Model</a>
+	</div>
+
+	<h1 align="center"> The Model </h1>
+
+	<!-- Main Content-->
+	<div align="center">
+		<img src = "../static/img/unet.png"  width="30%" style="padding-top: 30px">
+		<figcaption>Fig. Illustration of U-Net Architecture (produced using <a href="https://arxiv.org/abs/1505.04597">U-Net: Convolutional Networks for Biomedical Image Segmentation</a>) </figcaption>
+	</div>
+
+	<div class="content" align="center">
+		<p> My tumor segmentation model shown above is a U-Net, and was built using Pytorch. The input images
+		were first reshaped into standardized 224x224x1 grayscale arrays with augmentations, they were then normalized through positive global standardization. After being trained on the
+		data, the model segments on images. Below are a few of my model's training parameters and metrics:<br /><br />
+		Initial Learning Rate: 0.001<br />
+		Number of Total Training Epochs: 40<br />
+		Final Test Set Accuracy: 0.85
+		</p>
+	</div>
+
+	<!-- Footer -->
+	<div class = "footer">
+	  	<p>Southern Federal University 2022 - Brain Tumor Detection<br>
+	  	<a href="https://github.com/licksylick"  style="color:white">GitHub Page</a></p>
+	</div>
+</div>
+</body>
+</html>
